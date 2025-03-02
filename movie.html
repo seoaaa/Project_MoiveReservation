@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 예매 사이트</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <!--메인화면-->
+    <div id="home">
+        <header>
+            <h1>🍿 MOVIE 🍿</h1>
+        </header>
+        <main>
+            <section id="movie-list">
+                <div class="movie" onclick="showMovieDetail('코난')">
+                    <img src="./image/명탐정코난_흑철의어영.jpeg" alt="Movie 1 Poster" title="명탐정코난">
+                    <h2>명탐정코난 : 흑철의 어영</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('기생충')">
+                    <img src="./image/기생충.jpeg" alt="Movie 2 Poster" title="기생충">
+                    <h2>기생충</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('토토로')">
+                    <img src="./image/이웃집토토로.jpeg" alt="Movie 2 Poster" title="이웃집토토로">
+                    <h2>이웃집 토토로</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('포레스트검프')">
+                    <img src="./image/포레스트검프.jpeg" alt="Movie 2 Poster" title="포레스트검프">
+                    <h2>포레스트 검프</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('스즈메')">
+                    <img src="./image/스즈메의문단속.jpeg" alt="Movie 2 Poster" title="스즈메의문단속">
+                    <h2>스즈메의 문단속</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('인사이드아웃')">
+                    <img src="./image/인사이드아웃2.jpeg" alt="Movie 2 Poster" title="인사이드아웃2">
+                    <h2>인사이드 아웃2</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('범죄도시')">
+                    <img src="./image/범죄도시4.jpeg" alt="Movie 2 Poster" title="범죄도시4">
+                    <h2>범죄도시4</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('센과치히로')">
+                    <img src="./image/센과치히로의행방불명.jpeg" alt="Movie 2 Poster" title="센과치히로의행방불명">
+                    <h2>센과 치히로의 행방불명</h2>
+                </div>
+                <div class="movie" onclick="showMovieDetail('퓨리오사')">
+                    <img src="./image/퓨리오사.jpeg" alt="Movie 2 Poster" title="퓨리오사">
+                    <h2>퓨리오사:매드맥스 사가</h2>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!--예매 화면-->
+    <div id="reserve">
+        <header>
+            <h1 id="movie-title">영화 상세 정보</h1>
+        </header>
+        <section id="movie-details">
+            <img id="movie-poster" src="" alt="Movie Poster" class="movie-poster">
+            <div id="movie-info">
+        
+                <p id="movie-director">감독: </p>
+                <p id="movie-rating">관람 등급: </p>
+                <p id="movie-description">영화 설명</p>
+                <button id="go-back">홈으로</button>
+                <button id="book-now">예매하기</button>    
+            </div>               
+        </section>
+
+        <!-- 시간 및 인원 선택 화면 -->
+        <section id="time-selection" >
+            
+            <h2>시간 및 인원 선택</h2>
+            <select id="time-slot">
+                <label for="time">시간:</label>
+                <option value="9:00">10:00</option>
+                <option value="12:00">12:00</option>
+                <option value="15:00">15:00</option>
+                <option value="18:00">18:00</option>
+                <option value="21:00">21:00</option>
+                
+            </select>
+            <br><br>
+            <label for="number-of-tickets">인원:</label>
+            <input type="number" id="number-of-tickets" min="1" max="10" value="1">
+            <br><br>
+            <button id="confirm-booking">예매 확인</button>
+        </section>
+    </div>
+    
+
+    <script src="movie.js"></script>
+</body>
+</html>
